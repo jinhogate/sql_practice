@@ -1,0 +1,30 @@
+--exercice3
+-- 1-
+select * 
+from student;
+
+--2-
+select *
+from student
+order by numstud desc;
+
+--3-
+select name as [last name],
+	   firstname
+from student
+where city = 'Lyon';
+
+--4-
+select name as [last name],
+	   firstname, 
+	   city
+from student
+where city like '%ll%';
+
+--5-
+select firstname 
+from student
+where name in ('DUPONT','DURAND','MARTIN');
+
+
+

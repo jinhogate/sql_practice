@@ -1,0 +1,85 @@
+--Excercice 5
+
+--1-
+select count(*)
+from test;
+
+--2-
+select stu.name as [lastname],
+	   stu.firstname,
+	   nte.score
+from notation as nte inner join 
+	 student as stu 
+	 on nte.numstud=stu.numstud;
+	 
+--3-
+select stu.name as [lastname],
+	   stu.firstname,
+	   nte.score,
+	   mat.wording
+from notation as nte 
+	 inner join 
+	 student as stu 
+	 on nte.numstud=stu.numstud
+	 inner join
+	 test
+	 on nte.numtest=test.numtest
+	 inner join
+	 matter as mat
+	 on test.codemat=mat.codemat;
+
+--4-
+select score
+from notation
+where score>=10;
+
+--5-
+select name,
+	   firstname
+from student
+where exists 
+         (select count(score),numstud
+		 from notation
+		 where student.numstud=notation.numstud
+		 and score=20
+		 group by score
+		 having count(score)>=1
+		 )
+;
+
+--6-
+select stu.name as [lastname],
+	   stu.firstname,
+	   avg(nte.score) as [moyenne des notes]
+from notation as nte inner join 
+	 student as stu 
+	 on nte.numstud=stu.numstud
+group by stu.name,stu.firstname;
+
+--7 -
+select *
+from test
+where testdate between '2014-01-01' and '2014-06-30';
+
+--8 -
+select test.numtest as number,
+       test.testdate as date,
+	   test.place,
+	   mat.wording as subject
+from test 
+     left join 
+	 matter mat
+	 on test.codemat=mat.codemat;
+	 
+-- 9 -
+select stu.name as [lastname],
+	   stu.firstname,
+	   avg(nte.score) as [moyenne des notes]
+from notation as nte inner join 
+	 student as stu 
+	 on nte.numstud=stu.numstud
+group by stu.name,stu.firstname
+order by avg(nte.score) desc;
+	   
+		 
+		 

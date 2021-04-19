@@ -1,0 +1,36 @@
+-- Excercice 1 
+
+create database studentDB; 
+
+create table matter(
+	codemat char(5) primary key,
+	wording char(50),
+	coef float(5)
+);
+
+create table student (
+	numstud int primary key,
+	name char (50) not null,
+	firstname char (255) not null,
+	dateofbirth date,
+	street char(120),
+	postalcod char(8),
+	city char(155) not null
+);
+
+create table test(
+	numtest int primary key,
+	testdate date,
+	place char(60),
+	codemat char(5),
+	constraint fk_testMatter foreign key (codemat) references matter(codemat)
+);
+
+create table notation(
+	numstud int,
+	numtest int,
+	score float(5) not null,
+	constraint fk_notationStudent foreign key (numstud) references student(numstud),
+	constraint fk_notationTest foreign key (numtest) references test(numtest),
+	constraint pk_notation primary key(numstud,numtest)
+);

@@ -1,0 +1,68 @@
+
+--excercice 2
+
+insert into student
+values 
+(1, 'GBEGNON', 'kossi', '1995-09-09', 'rue sainte annee','54000','Nancy'),
+(2, 'DUPONT', 'coco', '1997-09-04', 'rue sainte annee','75002','Paris'),
+(3, 'DURAND', 'ali', '1999-07-09', 'rue sainte annee','75006','Paris'),
+(4, 'MARTIN', 'estse', '1995-09-09', 'rue sainte annee','75001','Paris'),
+(5, 'AKOLI', 'moise', '1995-02-09', 'rue sainte annee','66000','Lille'),
+(6, 'AGBO', 'herve', '1993-04-08', 'rue sainte annee','99000','Libreville'),
+(7, 'GOKAN', 'credo', '2000-09-09', 'rue sainte annee','128895','Lyon')
+;
+
+insert into matter
+values 
+('MI44','Sécurité informatique',2),
+('SQ40','Statistique',1),
+('GL52','Développement informatique',3)
+;
+
+insert into test
+values 
+(1,'2014-01-01','Paris amphi404','MI44'),
+(2,'2014-04-20','Paris amphi404','SQ40'),
+(3,'2014-06-30','Paris amphi404','GL52'),
+(4,'2014-07-07','Paris amphi404','MI44'),
+(5,'2014-07-14','Paris amphi404','GL52'),
+;
+
+insert into notation
+values 
+(1,1,19),
+(1,2,10),
+(1,3,14),
+(7,1,20),
+(7,2,17),
+(2,1,19),
+(2,2,20),
+(2,3,19),
+(2,4,11),
+(2,5,12),
+(7,3,07),
+(3,2,13),
+(7,4,11),
+(3,1,10),
+(3,3,11),
+(7,5,10),
+(4,2,13),
+(4,3,06),
+(4,1,07),
+(4,4,08),
+(5,1,01),
+(5,2,03),
+(5,3,04),
+(5,4,10),
+(5,5,06),
+(6,1,02),
+(6,2,08),
+(6,3,17),
+(6,4,09),
+(6,5,09)
+;
+
+
+
+
+

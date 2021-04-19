@@ -1,0 +1,12 @@
+--Excercice 4
+
+--1 -
+select wording,
+       (coef*10) as [coefficient (%)],
+	   codemat
+from matter
+group by codemat;
+
+--2 -
+select sum(coef) as [Somme coefficient]
+from matter;
