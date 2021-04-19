@@ -2,8 +2,7 @@
 
 --1 -
 select wording,
-       (coef*10) as [coefficient (%)],
-	   codemat
+       coef*10 as [coefficient (%)]
 from matter
 group by codemat;
 
